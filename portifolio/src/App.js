@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 import Navbar from "./components/layout/Navbar";
-import Contact from './components/pages/Contact'; // Importe o componente da página de Contato
+import Contact from './components/pages/Contact';
 import Container from './components/layout/Container';
 import Home from './components/pages/Home';
 
@@ -17,11 +17,10 @@ function App() {
             path="/"
             element={
               <div>
-                {/* Seções da página principal */}
-                <div id="home" style={{ height: '100vh' }}>
+                <div id="home" style={{ minHeight: '100dvh' }}>
                   <Home />
                 </div>
-                <div id="about" style={{ height: '100vh' }}>
+                <div id="about" style={{ minHeight: '50dvh' }}>
                   <h1>Empresa Section</h1>
                   {/* Conteúdo da seção Empresa */}
                 </div>

@@ -4,6 +4,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    
 }
 
 .flex{
@@ -22,13 +23,13 @@
 .txt_home h1{
     color: var(--white-normal);
     font-size: 3rem;
-    text-align: start;
+    text-align: center;
     line-height: 2.5rem;
 }
 
 
 .txt_home h1 > span{
-    color: var(--red-normal);
+    color: var(--red-dark);
     display: block;
 }
 
@@ -50,14 +51,16 @@
 .img_portifolio img{
     width: 100%;
     border-radius: 100px 30px 100px 30px;
-    background-color: var(--red-normal);
+    background-color: var(--red-dark);
     animation: move 2s infinite;
 }
 
 .icons{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
+    margin-top: 20px;
 }
 
 .icons i{

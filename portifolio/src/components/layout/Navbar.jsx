@@ -4,7 +4,6 @@ import { Link as RouterLink, useNavigate } from 'react-router-dom'; // Importar 
 
 import styles from './modules/Navbar.module.css';
 import logo from '../imgs/LogoSomenteDesenho.png';
-import Container from './Container';
 
 function Navbar() {
   const navigate = useNavigate(); // Hook para navegação

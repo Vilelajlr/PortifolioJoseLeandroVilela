@@ -16,7 +16,7 @@ export default function Projects(){
         {
             nome: "Portfolio",
             imagem: portfolio,
-            link: "https://www.facebook.com",
+            link: "https://joseleandrovilela.vercel.app/",
             icons: [<FaHtml5 key="html5" />, <FaCss3 key="css" />, <FaReact key="react" />, <FaJs key="js" />]
         },
         {

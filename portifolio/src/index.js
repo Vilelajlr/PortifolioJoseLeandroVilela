@@ -9,10 +9,10 @@ import 'aos/dist/aos.css'; // Importa o CSS do AOS
 function Main() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
-    offset: 120, 
-    once: false,
-    mirror: true,    
+      duration: 700, 
+      offset: 120, 
+      once: false,
+      mirror: true,    
     });
   }, []);
 

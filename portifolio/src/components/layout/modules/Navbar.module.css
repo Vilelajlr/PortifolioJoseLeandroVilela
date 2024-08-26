@@ -1,14 +1,32 @@
-.navbar {
-    display: flex;
-    background-color: transparent;
-    padding: 1rem;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+.max_width{
+    max-width: 1420px;
+    margin: 0 auto;
     
 }
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10dvh;
+    max-width: 1420px;
+    margin: 0 auto;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1000;
+}
+
+
+.scrolled {
+    z-index: 995;
+    transition: background-color 1s;
+    background-color: var(--secondary-normal);
+    width: 100%;
+    height: 10dvh;
+    position: fixed;
+  }
 
 .menu{
     display: flex;
@@ -18,7 +36,7 @@
 }
 
 .img_logo{
-    width: 100px;
+    color: var(--white-normal);
 }
 
 .list {

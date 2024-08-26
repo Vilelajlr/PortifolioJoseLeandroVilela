@@ -20,6 +20,9 @@
   --red-light: #d34040;
 }
 
+.max{
+  width: 100%;
+}
 
 *{
   margin: 0;
@@ -31,9 +34,11 @@
 body{
   width: 100%;
   height: 100dvh;
-
+  
   background-color: var(--primary-normal);
 }
+
+
 
 button{
   font-family: 'Roboto', sans-serif;

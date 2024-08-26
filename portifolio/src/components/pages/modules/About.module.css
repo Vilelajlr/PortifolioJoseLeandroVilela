@@ -1,0 +1,39 @@
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+    background-color: var(--white-normal);
+    height: 450px;
+}
+
+.max_width{
+    max-width: 1000px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.max_width > div > h1{
+    font-size: 2rem;
+    color: var(--secondary-normal);
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+}
+
+.max_width > div > p{
+    font-size: 1rem;
+    color: var(--secondary-normal);
+    text-align: justify;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 1rem;
+    text-indent: 0.2rem;
+}
+

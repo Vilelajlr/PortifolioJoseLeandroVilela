@@ -16,6 +16,7 @@
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 1000;
+    padding: 0 20px;
 }
 
 
@@ -37,18 +38,17 @@
 
 .img_logo{
     color: var(--white-normal);
+    font-size: 0.9rem;
 }
 
 .list {
     display: flex;
     list-style: none;
     align-items: center;
+    gap: 20px;
 }
 
-.item{
-    margin-right: 1em;
 
-}
 
 .item a{
     color: white;
@@ -62,3 +62,4 @@
 .item a:hover{
     color: var(--red-normal);
 }
+

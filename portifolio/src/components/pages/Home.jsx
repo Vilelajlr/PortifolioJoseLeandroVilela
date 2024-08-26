@@ -23,7 +23,7 @@ export default function Home(){
 
                         <Button link="https://www.linkedin.com/in/vilelajlr/" conteudo={<FaLinkedin/>} estilo="redes" />
 
-                        <Button link="#" conteudo={<FaGithub/>} estilo="redes" />
+                        <Button link="https://github.com/Vilelajlr" conteudo={<FaGithub/>} estilo="redes" />
                         
                         <div>
                             <Button link="/contato" conteudo="Entre em contato" estilo="contact" />

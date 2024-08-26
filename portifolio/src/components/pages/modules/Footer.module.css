@@ -1,0 +1,76 @@
+.footer{
+    width: 100%;
+    background-color: var(--primary-normal);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15dvh;
+}
+
+.flex{
+    max-width: 1420px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.txt_logo{
+    font-size: 0.7rem;
+    color: var(--white-normal);
+    font-weight: bolder;
+}
+
+.txt_direitos{
+    font-size: 0.7rem;
+    color: var(--white-normal);
+}
+
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+    
+}
+
+.icons a{
+    color: var(--white-normal);
+    font-size: 1.5rem;
+    text-decoration: none;
+    
+}
+
+.icons a:hover{
+    color: var(--red-light);
+
+    animation: move 2s alternate infinite;
+}
+
+@keyframes move{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .flex{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .icons{
+        width: 100%;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+}

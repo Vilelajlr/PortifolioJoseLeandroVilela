@@ -12,6 +12,7 @@ import About from './components/pages/About';
 
 import './App.css';
 import Projects from './components/pages/Projects';
+import Footer from './components/pages/Footer';
 
 
 
@@ -32,15 +33,17 @@ function App() {
                 <div id="about">
                   <About />
                 </div>
-                <div id="projects" style={{ height: '100vh' }}>
+                <div id="projects">
                   <Projects />
                 </div>
-                </div> 
+              </div> 
             }
           />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      
+        
+        <Footer />
+
     </Router>
   );
 }

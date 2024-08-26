@@ -1,11 +1,12 @@
 import React from "react";
-import {FaHtml5, FaCss3, FaReact, FaJs, FaSass } from "react-icons/fa";
+import {FaHtml5, FaCss3, FaReact, FaJs, FaSass, FaGithub } from "react-icons/fa";
 
 import portfolio from "../imgs/portifolioVilela.png";
 import relogio from "../imgs/relogioDA.png";
 import lpVilela from "../imgs/landingPageVilela.png";
 
 import ProjectsLayout from "../layout/ProjectsLayout";
+
 
 import styles from "./modules/Projects.module.css";
 
@@ -47,6 +48,19 @@ export default function Projects(){
                     <div className={styles.icons}>
                         <div className={styles.ic}>
                             {project.icons}
+
+                            
+
+                        </div>
+
+                        <div className={styles.github}>
+                                <button onClick={ 
+                                    () => window.open(project.github, "_blank")
+                                 }>
+                                    <abbr title="Ver projeto no github">
+                                        <FaGithub />
+                                    </abbr>
+                                </button>
                         </div>
                         
                     </div>

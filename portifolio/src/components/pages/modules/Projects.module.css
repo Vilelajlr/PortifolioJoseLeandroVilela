@@ -2,6 +2,7 @@
     background-color: var(--white-normal);
     min-height: 300px;
     overflow: hidden;
+   
 }
 
 .section > h1{
@@ -20,7 +21,8 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
+    justify-content: center;
     
 }
 
@@ -33,6 +35,9 @@
     align-items: center;
     background-color: var(--primary-normal);
     border-radius: 0 0 10px 10px;
+    justify-content: space-between;
+    padding-right: 20px;
+   
 }
 
 .ic{
@@ -40,4 +45,31 @@
     align-items: center;
     gap: 8px;
     margin-left: 8px;
+}
+
+.github > button{
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: color 0.5s ease;
+    
+}
+
+.github > button:hover{
+    color: var(--red-normal);
+}
+
+
+@media screen and (max-width: 768px){
+    .max_width{
+        flex-direction: column;
+    }
+
+    .principal{
+        width: 100%;
+        justify-content: center;
+        border-radius: 0 0 10px 10px;
+    }
 }

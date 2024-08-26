@@ -6,6 +6,6 @@ export default function ButtonEntreEmContato({link, conteudo, estilo}){
 
 
     return(
-        <a href={link} target="_blank" className={`${styles[estilo]}`}>{conteudo}</a>
+        <a href={link} target="_blank" rel="noreferrer" className={`${styles[estilo]}`}>{conteudo}</a>
     );
 }

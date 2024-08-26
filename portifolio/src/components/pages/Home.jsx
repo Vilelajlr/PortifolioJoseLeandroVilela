@@ -14,11 +14,11 @@ export default function Home(){
         
         <div className={styles.home} >
             <div className={styles.flex}>
-                <div className={styles.txt_home}  >
+                <div className={styles.txt_home}  data-aos="fade-right" >
                     <h1>Olá, meu nome é <span>José Leandro Vilela</span></h1>
                     <p>Web Developer</p>
 
-                    <div className={styles.icons}>
+                    <div className={styles.icons} data-aos="fade-up" data-aos-delay="100">
                         <Button link="https://www.instagram.com/joseleandrovilela/" conteudo={<FaInstagram/>} estilo="redes" />
 
                         <Button link="https://www.linkedin.com/in/vilelajlr/" conteudo={<FaLinkedin/>} estilo="redes" />
@@ -31,7 +31,7 @@ export default function Home(){
                     </div>
                 </div>
                 
-                <div className={styles.img_portifolio}>
+                <div className={styles.img_portifolio} data-aos="fade-left">
                     <img src={imgMinha} alt="Minha foto"  />
                 </div>
                 

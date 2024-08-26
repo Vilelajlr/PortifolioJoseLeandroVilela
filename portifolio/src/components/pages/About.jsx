@@ -5,7 +5,7 @@ import styles from "./modules/About.module.css";
 export default function About() {
     return(
         <section className={styles.flex} >
-                <div className={styles.max_width}>
+                <div className={styles.max_width} data-aos="fade-up">
                     <div>
                         <h1>Sobre mim</h1>
                     </div>

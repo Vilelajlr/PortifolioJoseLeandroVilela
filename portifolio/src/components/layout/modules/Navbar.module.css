@@ -60,5 +60,5 @@
 }
 
 .item a:hover{
-    color: var(--primary-light);
+    color: var(--red-normal);
 }

@@ -11,6 +11,9 @@ import About from './components/pages/About';
 
 
 import './App.css';
+import Projects from './components/pages/Projects';
+
+
 
 function App() {
   return (
@@ -30,8 +33,7 @@ function App() {
                   <About />
                 </div>
                 <div id="projects" style={{ height: '100vh' }}>
-                  <h1>Projetos Section</h1>
-                  {/* Conteúdo da seção Projetos */}
+                  <Projects />
                 </div>
                 </div> 
             }

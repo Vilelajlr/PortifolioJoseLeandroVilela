@@ -5,7 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15dvh;
+    height: 18dvh;
+    padding: 10px;
 }
 
 .flex{

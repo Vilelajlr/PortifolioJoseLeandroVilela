@@ -3,7 +3,7 @@ import { Link as ScrollLink } from 'react-scroll'; // Importar Link do react-scr
 import { Link as RouterLink, useNavigate } from 'react-router-dom'; // Importar Link e useNavigate do react-router-dom
 
 import styles from './modules/Navbar.module.css';
-import logo from '../imgs/LogoSomenteDesenho.png';
+
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false); // Estado para controlar a rolagem

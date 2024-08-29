@@ -37,10 +37,15 @@ function App() {
                 <div id="projects">
                   <Projects />
                 </div>
+
+                <div id="contact">
+                  <Contact />
+                </div>
+
               </div> 
             }
           />
-          <Route path="/contact" element={<Contact />} />
+          
         </Routes>
         
         <Footer />

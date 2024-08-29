@@ -15,19 +15,22 @@ export default function Projects() {
       nome: "Portfolio",
       imagem: portfolio,
       link: "https://joseleandrovilela.vercel.app/",
-      icons: [<FaHtml5 key="html5" />, <FaCss3 key="css" />, <FaReact key="react" />, <FaJs key="js" />]
+      icons: [<FaHtml5 key="html5" />, <FaCss3 key="css" />, <FaReact key="react" />, <FaJs key="js" />],
+      github: "https://github.com/Vilelajlr/PortifolioJoseLeandroVilela"
     },
     {
       nome: "Relogio Digital/Analógico",
       imagem: relogio,
       link: "https://vilelajlr.github.io/ProjetoRelogioAnalogico/index.html",
-      icons: [<FaHtml5 key="html5" />, <FaCss3 key="css" />, <FaJs key="js" />]
+      icons: [<FaHtml5 key="html5" />, <FaCss3 key="css" />, <FaJs key="js" />],
+      github: "https://github.com/Vilelajlr/ProjetoRelogioAnalogico"
     },
     {
       nome: "Landing Page Barbearia",
       imagem: lpVilela,
       link: "https://vilelacodelpbarber.vercel.app/",
-      icons: [<FaHtml5 key="html5" />, <FaCss3 key="css" />, <FaJs key="js" />, <FaSass key="sass" />]
+      icons: [<FaHtml5 key="html5" />, <FaCss3 key="css" />, <FaJs key="js" />, <FaSass key="sass" />],
+      github: "https://github.com/Vilelajlr/ProjetoLandingPage"
     }
   ];
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll'; // Importar Link do react-scroll
-import { Link as RouterLink, useNavigate } from 'react-router-dom'; // Importar Link e useNavigate do react-router-dom
+import { useNavigate } from 'react-router-dom'; // Importar Link e useNavigate do react-router-dom
 
 import styles from './modules/Navbar.module.css';
 
@@ -57,9 +57,9 @@ function Navbar() {
               </a>
             </li>
             <li className={styles.item}>
-              <RouterLink to="/contact">
+              <a href="/" onClick={(e)=> {e.preventDefault(); handleScroll('projects');}}>
                 Contact
-              </RouterLink>
+              </a>
             </li>
           </ul>
         </div>

@@ -38,6 +38,11 @@ export default function Contact() {
       .then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
+            setShowPopup(true);
+            const texto = 'Email enviado!';
+            setTimeout(() => {
+              setShowPopup(false);
+            }, 3000); // Oculta o pop-up após 3 segundos
           setName('');
           setEmail('');
           setText('');
@@ -117,7 +122,7 @@ export default function Contact() {
       </div>
       {showPopup && (
         <div className={styles.popup}>
-          Preencha todos os campos!
+          {texto}
         </div>
       )}
     </section>

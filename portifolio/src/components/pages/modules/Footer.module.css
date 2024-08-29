@@ -1,15 +1,17 @@
 .footer{
     width: 100%;
     background-color: var(--primary-normal);
-    border-top: 1px solid var(--white-normal);
+    
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 18dvh;
-    padding: 10px;
+    
 }
 
 .flex{
+    border-top: 1px solid var(--white-normal);
+    padding-top: 50px;
     max-width: 1420px;
     display: flex;
     align-items: center;

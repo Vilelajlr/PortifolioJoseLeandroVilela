@@ -38,7 +38,7 @@ function App() {
                   <Projects />
                 </div>
 
-                <div id="contact">
+                <div id="contacts">
                   <Contact />
                 </div>
 

@@ -1,0 +1,161 @@
+.section_contact{
+    width: 100%;
+    min-height: 700px;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+.txt_contact{
+    color: var(--white-normal);
+    font-size: 2rem;
+    margin-bottom: 20px;
+
+}
+
+.flex_contact{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 1420px;
+}
+
+.form_contact{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form_contact input{
+    width: 100%;
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--white-normal);
+    padding: 10px 20px;
+    border: none;
+    border-bottom: 1px solid rgb(230, 230, 0);
+}
+
+.form_contact input::placeholder{
+    color: var(--white-normal);
+}
+
+.form_contact input:focus{
+    outline: none;
+}
+
+.textarea_container{
+    position: relative;
+    display: inline-block;
+}
+
+.form_contact textarea{
+    width: 100%;
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--white-normal);
+    padding: 10px 20px;
+    border: none;
+    border-bottom: 1px solid rgb(230, 230, 0);
+    resize: none;
+    scrollbar-width: 3px;
+}
+
+
+
+.form_contact textarea::placeholder{
+    color: var(--white-normal);
+}
+
+.form_contact textarea:focus{
+    outline: none;
+}
+
+.form_contact textarea::-webkit-scrollbar{
+    width: 3px;
+}
+
+.form_contact p{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn_contact{
+    background-color: transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 0px;
+    color: var(--white-normal);
+    font-size: 1rem;
+    transition: border 0.5s ease;
+    border: 1px solid transparent;
+
+}
+
+.btn_contact:hover{
+    border: 1px solid var(--red-normal);
+}
+
+.infos_contact{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--white-normal);
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.redes{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.curriculo{
+    margin-top: 40px; 
+}
+
+.curriculo a{
+    color: var(--white-normal);
+    font-size: 1rem;
+    font-weight: bolder;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 1px solid var(--red-normal);
+    
+}
+
+@media screen and (max-width: 768px){
+
+    .flex_contact{
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .infos_contact{
+        margin-bottom: 30px;
+    }
+    
+}

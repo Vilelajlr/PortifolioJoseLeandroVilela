@@ -57,7 +57,7 @@ function Navbar() {
               </a>
             </li>
             <li className={styles.item}>
-              <a href="/" onClick={(e)=> {e.preventDefault(); handleScroll('projects');}}>
+              <a href="/" onClick={(e)=> {e.preventDefault(); handleScroll('contacts');}}>
                 Contact
               </a>
             </li>

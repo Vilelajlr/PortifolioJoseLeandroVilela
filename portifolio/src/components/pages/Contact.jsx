@@ -11,8 +11,9 @@ export default function Contact() {
   const [text, setText] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-
+  const [texto, setTexto] = useState('');
   const [showPopup, setShowPopup] = useState(false);
+  const [popupStyle, setPopupStyle] = useState(''); // Novo estado para o estilo do pop-up
 
   const chacaracteres = maxLength - text.length;
 
@@ -21,6 +22,8 @@ export default function Contact() {
 
     if (name === '' || email === '' || text === '') {
       setShowPopup(true);
+      setTexto('Preencha todos os campos!');
+      setPopupStyle(styles.error); // Define o estilo de erro
       setTimeout(() => {
         setShowPopup(false);
       }, 3000); // Oculta o pop-up após 3 segundos
@@ -30,7 +33,7 @@ export default function Contact() {
     const templateParams = {
       from_name: name,
       message: text,
-      email: email
+      email: email,
     };
 
     emailjs
@@ -38,17 +41,24 @@ export default function Contact() {
       .then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
-            setShowPopup(true);
-            const texto = 'Email enviado!';
-            setTimeout(() => {
-              setShowPopup(false);
-            }, 3000); // Oculta o pop-up após 3 segundos
+          setShowPopup(true);
+          setTexto('Email enviado com sucesso!');
+          setPopupStyle(styles.success); // Define o estilo de sucesso
+          setTimeout(() => {
+            setShowPopup(false);
+          }, 3000); // Oculta o pop-up após 3 segundos
           setName('');
           setEmail('');
           setText('');
         },
         (error) => {
           console.log('FAILED...', error);
+          setShowPopup(true);
+          setTexto('Falha ao enviar o email.');
+          setPopupStyle(styles.error); // Define o estilo de erro
+          setTimeout(() => {
+            setShowPopup(false);
+          }, 3000); // Oculta o pop-up após 3 segundos
         }
       );
   }
@@ -121,7 +131,7 @@ export default function Contact() {
         </div>
       </div>
       {showPopup && (
-        <div className={styles.popup}>
+        <div className={`${styles.popup} ${popupStyle}`}>
           {texto}
         </div>
       )}

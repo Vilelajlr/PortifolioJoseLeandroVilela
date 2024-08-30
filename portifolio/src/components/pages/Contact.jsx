@@ -68,6 +68,7 @@ export default function Contact() {
       <h1 className={styles.txt_contact}>Entre em contato comigo!</h1>
       <div className={styles.flex_contact}>
         <div>
+        
           <form onSubmit={sendEmail} className={styles.form_contact}>
             <input
               type="text"

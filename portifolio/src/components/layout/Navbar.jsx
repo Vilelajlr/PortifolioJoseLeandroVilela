@@ -1,29 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { Link as ScrollLink } from 'react-scroll'; // Importar Link do react-scroll
-import { useNavigate } from 'react-router-dom'; // Importar Link e useNavigate do react-router-dom
-
+import { Link as ScrollLink } from 'react-scroll';
+import { useNavigate } from 'react-router-dom';
 import styles from './modules/Navbar.module.css';
-
+import mobileIconMenu from '../imgs/menu_white_36dp.svg';
 
 function Navbar() {
-  const [scrolled, setScrolled] = useState(false); // Estado para controlar a rolagem
-  const navigate = useNavigate(); // Hook para navegação
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // Estado para controlar o menu móvel
+  const navigate = useNavigate();
 
   const handleScroll = (section) => {
-    navigate('/'); // Redireciona para a página principal
+    setMenuOpen(false); // Fecha o menu ao clicar em um item
+    navigate('/'); 
     setTimeout(() => {
-      document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' }); // Rola suavemente para a seção
-    }, 100); // Pequeno delay para garantir que a rolagem ocorra após a navegação
+      document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   };
 
-  // Hook para verificar a rolagem da página
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', onScroll);
     return () => {
@@ -31,39 +27,79 @@ function Navbar() {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen); // Alterna o estado do menu móvel
+  };
+
   return (
     <div className={`${scrolled ? styles.scrolled : ''}`}>
-      <nav className={`${styles.navbar} `}>
-        <div className={styles.menu}>
-          <ScrollLink to="home" smooth={true} duration={500}>
-            <div className={styles.img_logo}>
-              <h1>José Leandro Vilela</h1>
+      <div className={styles.navbar_atributtes}>
+        <div className={styles.ajuste}>
+          <nav className={`${styles.navbar}`}>
+            <div className={styles.menu}>
+              <ScrollLink to="home" smooth={true} duration={500}>
+                <div className={styles.img_logo}>
+                  <h1>José Leandro Vilela</h1>
+                </div>
+              </ScrollLink>
+              <div className={styles.nav_list}>
+                <ul className={styles.list}>
+                  <li className={styles.item}>
+                    <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('home'); }}>
+                      Home
+                    </a>
+                  </li>
+                  <li className={styles.item}>
+                    <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('about'); }}>
+                      About
+                    </a>
+                  </li>
+                  <li className={styles.item}>
+                    <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('projects'); }}>
+                      Projects
+                    </a>
+                  </li>
+                  <li className={styles.item}>
+                    <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('contacts'); }}>
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className={styles.mobile_menu_icon}>
+                <button onClick={toggleMenu}>
+                  <img className={styles.icon} src={mobileIconMenu} alt="Menu" />
+                </button>
+              </div>
             </div>
-          </ScrollLink>
-          <ul className={styles.list}>
-            <li className={styles.item}>
-              <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('home'); }}>
-                Home
-              </a>
-            </li>
-            <li className={styles.item}>
-              <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('about'); }}>
-                About
-              </a>
-            </li>
-            <li className={styles.item}>
-              <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('projects'); }}>
-                Projects
-              </a>
-            </li>
-            <li className={styles.item}>
-              <a href="/" onClick={(e)=> {e.preventDefault(); handleScroll('contacts');}}>
-                Contact
-              </a>
-            </li>
-          </ul>
+          </nav>
+          {/* Adicione a classe 'open' com base no estado do menu móvel */}
+          <div className={`${styles.mobile_menu} ${menuOpen ? styles.open : ''}`}>
+            <ul className={styles.list_mobile}>
+              <li className={styles.item_mobile}>
+                <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('home'); }}>
+                  Home
+                </a>
+              </li>
+              <li className={styles.item_mobile}>
+                <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('about'); }}>
+                  About
+                </a>
+              </li>
+              <li className={styles.item_mobile}>
+                <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('projects'); }}>
+                  Projects
+                </a>
+              </li>
+              <li className={styles.item_mobile}>
+                <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('contacts'); }}>
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </nav>
+      </div>
     </div>
   );
 }

@@ -6,6 +6,9 @@ import styles from "./modules/Contact.module.css";
 
 import Button from "../layout/Button";
 
+
+import dowloadCurriculo from "../dowload/curriculoJoseVilela.pdf"
+
 export default function Contact() {
   const maxLength = 2000;
   const [text, setText] = useState('');
@@ -127,7 +130,7 @@ export default function Contact() {
           <p>Numero para contato!</p>
           <p>(34) 9 9940-1623</p>
           <div className={styles.curriculo}>
-            <a href="https://www.linkedin.com/in/vilelajlr/">Baixe meu curriculo!</a>
+            <a href={dowloadCurriculo} download={dowloadCurriculo}>Baixe meu curriculo!</a>
           </div>
         </div>
       </div>

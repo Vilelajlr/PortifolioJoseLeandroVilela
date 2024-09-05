@@ -68,11 +68,11 @@ export default function Contact() {
 
   return (
     <section className={styles.section_contact}>
-      <h1 className={styles.txt_contact}>Entre em contato comigo!</h1>
+      <h1 className={styles.txt_contact}  data-aos="fade-right">Entre em contato comigo!</h1>
       <div className={styles.flex_contact}>
         <div>
         
-          <form onSubmit={sendEmail} className={styles.form_contact}>
+          <form onSubmit={sendEmail} data-aos="fade-up" className={styles.form_contact}>
             <input
               type="text"
               name="name"
@@ -108,7 +108,7 @@ export default function Contact() {
             </div>
           </form>
         </div>
-        <div className={styles.infos_contact}>
+        <div className={styles.infos_contact} data-aos="fade-left">
           <p>Redes Sociais</p>
           <div className={styles.redes}>
             <Button

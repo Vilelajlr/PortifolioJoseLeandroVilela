@@ -51,17 +51,17 @@ function Navbar() {
                   </li>
                   <li className={styles.item}>
                     <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('about'); }}>
-                      About
+                      Sobre Mim
                     </a>
                   </li>
                   <li className={styles.item}>
                     <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('projects'); }}>
-                      Projects
+                      Projetos
                     </a>
                   </li>
                   <li className={styles.item}>
                     <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('contacts'); }}>
-                      Contact
+                      Entre em Contato
                     </a>
                   </li>
                 </ul>
@@ -83,17 +83,17 @@ function Navbar() {
               </li>
               <li className={styles.item_mobile}>
                 <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('about'); }}>
-                  About
+                  Sobre Mim
                 </a>
               </li>
               <li className={styles.item_mobile}>
                 <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('projects'); }}>
-                  Projects
+                  Projetos
                 </a>
               </li>
               <li className={styles.item_mobile}>
                 <a href="/" onClick={(e) => { e.preventDefault(); handleScroll('contacts'); }}>
-                  Contact
+                  Entre em Contato
                 </a>
               </li>
             </ul>

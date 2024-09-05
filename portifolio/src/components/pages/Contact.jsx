@@ -18,6 +18,8 @@ export default function Contact() {
   const [showPopup, setShowPopup] = useState(false);
   const [popupStyle, setPopupStyle] = useState(''); // Novo estado para o estilo do pop-up
 
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
   const chacaracteres = maxLength - text.length;
 
   function sendEmail(e) {
@@ -31,7 +33,16 @@ export default function Contact() {
         setShowPopup(false);
       }, 3000); // Oculta o pop-up após 3 segundos
       return;
+    }else if(email !== '' && !emailRegex.test(email)){
+        setShowPopup(true);
+        setTexto('Email inválido!');
+        setPopupStyle(styles.error); // Define o estilo de erro
+        setTimeout(() => {
+          setShowPopup(false);
+        }, 3000); // Oculta o pop-up após 3 segundos
+        return;
     }
+
 
     const templateParams = {
       from_name: name,

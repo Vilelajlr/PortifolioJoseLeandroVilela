@@ -31,7 +31,7 @@
 
 
 .txt_home h1 > span{
-    color: var(--red-dark);
+    color: var(--red-normal);
     display: block;
 }
 
@@ -40,21 +40,26 @@
     font-size: 1.7rem;
     font-weight: bolder;
     
-    text-shadow: 0 0 10px var(--red-normal);
+    text-shadow: 0 0 10px var(--red-dark);
     
 }
 
 .img_portifolio{
-    width: 350px;
+    width: 340px;
     background-size: cover;
-    
+
 }
+    
+
 
 .img_portifolio img{
     width: 100%;
     border-radius: 100px 30px 100px 30px;
-    background-color: var(--red-dark);
+    background-color: var(--red-light);
     animation: move 2s infinite;
+    z-index: 1;
+    position: relative;
+    
 }
 
 .icons{

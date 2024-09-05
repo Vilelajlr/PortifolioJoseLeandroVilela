@@ -9,7 +9,7 @@
 }
 
 .contact:hover{
-    background-color: var(--red-dark);
+    background-color: var(--red-light);
     box-shadow: 0 0 10px var(--red-normal);
     border: none;
 }

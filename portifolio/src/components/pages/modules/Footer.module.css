@@ -46,7 +46,7 @@
 }
 
 .icons a:hover{
-    color: var(--red-normal);
+    color: var(--red-light);
 
     animation: move 2s alternate infinite;
 }

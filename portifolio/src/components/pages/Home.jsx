@@ -38,7 +38,7 @@ export default function Home() {
 
             <div>
               <ScrollLink to="contacts" smooth={true} duration={500}>
-                <Button link="#" conteudo="Entre em contato" estilo="contact" />
+                <span className={styles.contact}>Entre em contato</span>
               </ScrollLink>
             </div>
           </div>

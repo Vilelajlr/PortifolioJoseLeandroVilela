@@ -22,6 +22,13 @@ export default function Contact() {
 
   const chacaracteres = maxLength - text.length;
 
+  function limparCampos(e){
+    e.preventDefault();
+    setName('');
+    setEmail('');
+    setText('');
+  }
+
   function sendEmail(e) {
     e.preventDefault();
 
@@ -115,7 +122,7 @@ export default function Contact() {
             </div>
             <div className={styles.buttons}>
               <button type="submit" className={styles.btn_contact}>Enviar</button>
-              <button type="reset" className={styles.btn_contact}>Limpar</button>
+              <button onClick={limparCampos} className={styles.btn_contact}>Limpar</button>
             </div>
           </form>
         </div>

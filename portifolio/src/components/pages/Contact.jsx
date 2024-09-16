@@ -86,7 +86,7 @@ export default function Contact() {
 
   return (
     <section className={styles.section_contact}>
-      <h1 className={styles.txt_contact}  data-aos="fade-right">Entre em contato comigo!</h1>
+      <h1 className={styles.txt_contact}  data-aos="fade-right">Entre em contato</h1>
       <div className={styles.flex_contact}>
         <div>
         
@@ -145,7 +145,7 @@ export default function Contact() {
               estilo="redes"
             />
           </div>
-          <p>Numero para contato!</p>
+          <p>Número para contato!</p>
           <p>(34) 9 9940-1623</p>
           <div className={styles.curriculo}>
             <a href={dowloadCurriculo} download={dowloadCurriculo}>Baixe meu curriculo!</a>
